@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->text('description')->nullable(false);
             $table->text('brand')->nullable(false);
             $table->double('price')->nullable(false);
-            $table->double('shopping_cost');
+            $table->double('shipping_cost');
             $table->string('image_path')->nullable(false);
             $table->timestamps();
         });
