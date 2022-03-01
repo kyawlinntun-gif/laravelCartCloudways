@@ -27,4 +27,7 @@ Route::get('/shop/{shop}', [ProductController::class, 'show'])->name('product');
 
 /* ---------- Start of CartController ---------- */
 Route::get('/cart', [CartController::class, 'index'])->name('cart');
+Route::get('/cart/{product}', [CartController::class, 'addToCart'])->name('addToCart');
+Route::get('/cart/{product}/remove', [CartController::class, 'removeToCart'])->name('removeToCart');
+Route::put('/cart/{product}', [CartController::class, 'updateToCart'])->name('updateToCart');
 /* ---------- End of CartController ---------- */
